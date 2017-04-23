@@ -1,0 +1,7 @@
+Documentation:
+  Enabled: false
+
+Style/IndentArray:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false

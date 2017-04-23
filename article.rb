@@ -4,6 +4,7 @@ require 'sqlite3'
 require 'logger'
 require_relative 'tweet'
 require_relative 'twitter_client'
+require_relative 'brags'
 
 ActiveRecord::Base.logger = Logger.new('debug.log')
 ActiveRecord::Base.establish_connection(
@@ -46,10 +47,8 @@ class Article < ActiveRecord::Base
   end
 
   def tweet_text
-    title
+    Brags.new(self).random
   end
-
-  private
 
   def escaped_title
     # CGI.escape will convert spaces to '+' which will break the URL
