@@ -47,7 +47,8 @@ class Article < ActiveRecord::Base
   end
 
   def tweet_text
-    Brags.new(self).random
+    brag = Brags.new(self).random
+    "#{brag} #{hashtag}"
   end
 
   def escaped_title
