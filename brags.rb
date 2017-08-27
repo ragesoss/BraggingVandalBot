@@ -35,7 +35,7 @@ class Brags
 
   def interjections
     %w(
-      omg lol wat haha wtf lmao WTF kek hehe wow whoa yass damn *snort*
+      bam! damn haha hehe kek lmao lol omg *snort* wat whoa wow wtf WTF yass
     )
   end
 
