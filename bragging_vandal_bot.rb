@@ -4,7 +4,7 @@ require_relative 'brags'
 Article.connect_to_database 'braggingvandalbot'
 
 class BraggingVandalBot
-  def tweet(article)
+  def self.tweet(article)
     brag = Brags.new(article).random
     tweet_text = "#{brag} #{article.hashtag}"
     article.tweet tweet_text
